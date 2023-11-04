@@ -222,9 +222,9 @@ bool ProviderRs232::tryOpen(int delayAfterConnect_ms)
 		_rs232Port.setBaudRate(_baudRate_Hz);
 
 		Debug(_log, "_rs232Port.open(QIODevice::ReadWrite): %s, Baud rate [%d]bps", QSTRING_CSTR(_deviceName), _baudRate_Hz);
-
+		QObject().thread()->usleep(1000*5);
 		QSerialPortInfo serialPortInfo(_deviceName);
-
+		QObject().thread()->usleep(1000*5);
 		QJsonObject portInfo;
 		Debug(_log, "portName:          %s", QSTRING_CSTR(serialPortInfo.portName()));
 		Debug(_log, "systemLocation:    %s", QSTRING_CSTR(serialPortInfo.systemLocation()));
