@@ -87,7 +87,7 @@ protected:
 	QSerialPort _rs232Port;
 	/// The used baud-rate of the output device
 	qint32 _baudRate_Hz;
-
+	bool _forceSerialDetection;
 protected slots:
 
 	///
@@ -119,7 +119,7 @@ private:
 	int _frameDropCounter;
 
 	bool _espHandshake;
-	bool _forceSerialDetection;
+	
 };
 
 #endif // PROVIDERRS232_H
