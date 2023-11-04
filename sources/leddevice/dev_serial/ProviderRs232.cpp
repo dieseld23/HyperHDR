@@ -249,7 +249,7 @@ bool ProviderRs232::tryOpen(int delayAfterConnect_ms)
 			{
 				disconnect(&_rs232Port, &QSerialPort::readyRead, nullptr, nullptr);
 
-				EspTools::initializeEsp(_rs232Port, serialPortInfo, _log);
+				EspTools::initializeEsp(_rs232Port, serialPortInfo, _log, _forceSerialDetection);
 			}
 		}
 		else
