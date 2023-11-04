@@ -1,3 +1,6 @@
+## UPDATE
+Edited to allow bypassing detection of Pico/ESP. QSerialPort does a RTS/DTR and then won't let the Pico/ESP boot properly. Added a checkbox to enable this under the adalight settings 
+
 ## About 
 
 Open source ambient lighting implementation for television and music sets based on the video and audio streams analysis. Focused on stability while ensuring performance and quality, especially for USB grabbers. Single and multi-threaded video processing optimization for **Windows**, **macOS** and **Linux x64 & ARM** (Raspberry Pi and others).
